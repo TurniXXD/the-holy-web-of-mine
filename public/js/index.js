@@ -1,4 +1,6 @@
 import '@css/index.css';
+var $ = require('jquery');
+require('jquery.terminal')($);
 
 window.onload = function () {
   typeWriter()

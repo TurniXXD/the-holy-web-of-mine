@@ -58,6 +58,10 @@ body {
 	height: 99vh !important;
 }
 
+a {
+	text-decoration: none;
+}
+
 /*! GLOBALS END !*/
 
 /*! PRELOADER !*/
@@ -77,7 +81,7 @@ body {
 }
 
 .loading {
-	overflow-y: hidden;
+	overflow: hidden;
 	height: 100%;
 }
 
