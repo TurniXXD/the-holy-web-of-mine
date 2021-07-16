@@ -1,0 +1,216 @@
+.h2-hello {
+	display: inline;
+	height: 8vh;
+}
+
+#hello-text {
+	font-size: 5vh;
+	float:left;
+}
+
+#toggle-text {
+	margin-bottom: 0.5vh;
+}
+
+#toggle-text div{
+	box-sizing: border-box;
+	font-size: 3vh;
+	margin-left: 20px;
+}
+
+#toggle-user-friendly-text {
+	
+}
+
+#toggle-professional-text {
+	display: none;
+}
+
+.toggle-text-container {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 20% !important;
+	border-bottom: 0.5vh var(--coding-color-dark) solid;
+	border-right: 0.5vh var(--coding-color-dark) solid;
+}
+
+.toggle-text-container div div {
+	box-sizing: border-box;
+	position: relative;
+  display: inline-block;
+}
+
+.toggle-text-container div div input {
+	box-sizing: border-box;
+	height: 40px;
+  left: 40px;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  width: 40px;
+}
+
+.toggle-text-container div div label{
+	box-sizing: border-box;
+  width: 1em;
+  display: inline-block;
+  border-radius: 50px;
+  margin: 10px 0 10px 40px;
+  position: relative;
+  transition: all 0.3s ease;
+  transform-origin: 20% center;
+	cursor: pointer;
+  border: 0.5vh solid var(--coding-color-dark);
+  height: 0.5em;
+}
+
+.toggle-text-container div div label:before{
+	background: var(--coding-color-dark);
+  display: block;
+  transition: all 0.2s ease;
+  border-radius: 2em;
+	transition: 0.3s ease;
+	border: 3px solid var(--coding-color-dark);
+  width: 0.3em;
+  height: 0.3em;
+  top: 0.05em;
+  left: 0.05em;
+}
+
+#toggleModeSwitch:checked + .toggle-item:before{
+	transform: translateX(0.5em);
+}
+
+#toggleModeSwitch:checked + .toggle-item:before ~ .toggle-text-container #toggle-text #toggle-user-friendly-text{
+	display: none;
+}
+
+#toggleModeSwitch:checked + .toggle-item:before ~ .toggle-text-container #toggle-text #toggle-professional-text{
+	display: block;
+}
+
+#toggleModeSwitch:checked .about-text-container {
+	background: red;
+}
+
+.toggle-text-container .toggle-wrapper .transparent #toggleModeSwitch:checked  + .toggle-text-container .toggle-wrapper .transparent .toggle-item:before ~ .toggle-text-container #toggle-text #toggle-user-friendly-text{
+	content: 'Toggle proffesional mode';
+	background: red;
+}
+
+.toggle-text-container div div input:not(:checked) #toggle-text div{
+	content: 'Toggle user-friendly mode';
+}
+
+.toggle-wrapper {
+	box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.toggle-wrapper:before,
+.toggle-wrapper:after,
+.toggle-text-container:before,
+.toggle-text-container:after,
+.toggle-text-container div div:before,
+.toggle-text-container div div:after,
+.toggle-text-container div div input:before,
+.toggle-text-container div div input:after,
+.toggle-text-container div div label:before,
+.toggle-text-container div div label:after {
+	content: "";
+	position: absolute;
+}
+
+/* TERMINAL */
+
+.about-text-container {
+	margin-left: 5vh;
+	border: 0.5vh solid var(--coding-color-dark);
+	-webkit-animation: terminalOpen 0.75s ease-in-out forwards;
+	-moz-animation: terminalOpen 0.75s ease-in-out forwards;
+	-ms-animation: terminalOpen 0.75s ease-in-out forwards;
+	-o-animation: terminalOpen 0.75s ease-in-out forwards;
+	animation: terminalOpen 0.75s ease-in-out forwards;
+}
+
+#about-text-container-u-f, #about-text-u-f  {
+	display: none;
+}
+
+#about-text-u-f p{
+	font-size: 4vh;
+	text-align: left;
+}
+
+#about-text {
+	margin-left: -30px;
+	overflow-x: hidden;
+	font-size: 3.5vh;
+	color: var(--coding-color-dark);
+	text-align: left;
+	float:left;
+	background: none;
+	border: none;
+	width: 128vh;
+	height: 56vh;
+	opacity: 0;
+	-webkit-animation: terminalWait 0.5s 0.5s ease forwards;
+	-moz-animation: terminalWait 0.5s 0.5s ease forwards;
+	-ms-animation: terminalWait 0.5s 0.5s ease forwards;
+	-o-animation: terminalWait 0.5s 0.5s ease forwards;
+	animation: terminalWait 0.5s 0.5s ease forwards;
+}
+
+.sub-text-container {
+	position: absolute;
+	margin-left: 5vh;
+	margin-top: 3vh;
+	bottom: 90vh !important;
+	border: 0.5vh solid var(--coding-color-dark);
+	-webkit-animation: terminalSubOpen 0.75s ease-in-out forwards;
+	-moz-animation: terminalSubOpen 0.75s ease-in-out forwards;
+	-ms-animation: terminalSubOpen 0.75s ease-in-out forwards;
+	-o-animation: terminalSubOpen 0.75s ease-in-out forwards;
+	animation: terminalSubOpen 0.75s ease-in-out forwards;
+}
+
+.sub-text {
+	margin-left: -30px;
+	overflow-x: hidden;
+	font-size: 3.5vh;
+	color: var(--coding-color-dark);
+	text-align: left;
+	float:left;
+	background: none;
+	border: none;
+	width: 125vh;
+	height: 17vh;
+	opacity: 0;
+	-webkit-animation: terminalWait 0.5s 0.5s ease forwards;
+	-moz-animation: terminalWait 0.5s 0.5s ease forwards;
+	-ms-animation: terminalWait 0.5s 0.5s ease forwards;
+	-o-animation: terminalWait 0.5s 0.5s ease forwards;
+	animation: terminalWait 0.5s 0.5s ease forwards;
+}
+
+.terminal, .terminal-output{
+  --color: var(--coding-color-dark);
+	--background: none;
+	--size: 2;
+}
+
+.cmd, .cmd div, .cmd span, .cmd-wrapper span span span, .terminal-font, .terminal-output, .terminal-output div div span{
+	text-align: left !important;
+	font-family: 'Goldman', cursive !important;
+}
+
+.cmd-cursor span, .cmd-blink{
+	border-right-width: 10vh;
+}

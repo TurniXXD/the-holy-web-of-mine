@@ -2,13 +2,32 @@ const path = require('path');
 const buildPath = path.resolve(__dirname, 'dist');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require("webpack");
 
 module.exports = {
 
+	resolve: {
+		// global vars for relative paths
+		alias: {
+			"@": path.resolve(__dirname, './public/'),
+			"@components": path.resolve(__dirname, './public/components/'),
+			"@img": path.resolve(__dirname, './public/img/'),
+			"@css": path.resolve(__dirname, './public/css/'),
+			"@js": path.resolve(__dirname, './public/js/'),
+			"$": 'jquery',
+			"jQuery": 'jquery',
+		}
+	},
+
 	entry: {
-		main: '/src/js/main.js',
+		main: '/public/js/main.js',
 		// pages
-		index: '/src/js/index.js',
+		index: '/public/js/index.js',
+		contact: '/public/js/contact.js',
+		faq: '/public/js/faq.js',
+		skills: '/public/js/skills.js',
+		work: '/public/js/work.js',
+		"404": '/public/js/404.js',
 	},
 
 	devServer: {
@@ -58,7 +77,7 @@ module.exports = {
 			{
 				test: /\.svg$/,
 				use: 'html-loader'
-			}
+			},
 		]
 	},
 
@@ -66,11 +85,45 @@ module.exports = {
 		new CleanWebpackPlugin({}),
 		/* INDEX */
 		new HtmlWebpackPlugin({
-			template: '/src/index.html',
+			template: '/public/index.html',
 			inject: true,
 			chunks: ['main', 'index'],
 			filename: 'index.html'
 		}),
+		new HtmlWebpackPlugin({
+			template: '/public/contact.html',
+			inject: true,
+			chunks: ['main', 'contact'],
+			filename: 'contact.html'
+		}),
+		new HtmlWebpackPlugin({
+			template: '/public/faq.html',
+			inject: true,
+			chunks: ['main', 'faq'],
+			filename: 'faq.html'
+		}),
+		new HtmlWebpackPlugin({
+			template: '/public/skills.html',
+			inject: true,
+			chunks: ['main', 'skills'],
+			filename: 'skills.html'
+		}),
+		new HtmlWebpackPlugin({
+			template: '/public/work.html',
+			inject: true,
+			chunks: ['main', 'work'],
+			filename: 'work.html'
+		}),
+		new HtmlWebpackPlugin({
+			template: '/public/404.html',
+			inject: true,
+			chunks: ['main', '404'],
+			filename: '404.html'
+		}),
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery"
+		})
 	],
 	output: {
 		filename: '[name].[contenthash].js',
