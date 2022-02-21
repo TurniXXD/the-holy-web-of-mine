@@ -1,7 +1,7 @@
 {
   "name": "myweb",
   "version": "1.0.0",
-  "description": "# Figma wireframe https://www.figma.com/file/J3oHRU5bjsEa8kAbIQqELQ/Untitled?node-id=0%3A1",
+  "description": "My blog made in plain HTML / CSS / JS",
   "main": "index.js",
   "scripts": {
     "test": "test"

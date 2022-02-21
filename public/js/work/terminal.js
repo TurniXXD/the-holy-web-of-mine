@@ -1,6 +1,7 @@
 $(document).ready(() => {
-  var path = "";
-  var input = "hello world";
+  let path = "";
+  window.location.hostname === '127.0.0.1' && (path = '/public')
+
   $("#work-text").terminal(
     {
       help: function () {
@@ -32,13 +33,13 @@ $(document).ready(() => {
       },
       ls: function () {
         this.echo(
-          "\n[[b;blue;none]about]\nabout.txt\n[[b;blue;none]contact]\ncontact.txt\n[[b;blue;none]music]\n[[b;blue;none]skills]\nsources.txt\n[[b;blue;none]work]\n"
+          "\n[[b;blue;none]about]\nabout.txt\n[[b;blue;none]contact]\ncontact.txt\n[[b;blue;none]music]\n[[b;blue;none]skills]\n[[b;blue;none]work]\n"
         );
       },
       cd: function (value) {
         switch (value) {
           case "about": {
-            window.location.pathname = "/public/about.html";
+            window.location.pathname = `${path}/about.html`;
             break;
           }
           case "about.txt": {
@@ -49,24 +50,20 @@ $(document).ready(() => {
             this.echo("\ncontact.txt is not a directory\n");
             break;
           }
-          case "sources.txt": {
-            this.echo("\nsources.txt is not a directory\n");
-            break;
-          }
           case "work": {
-            window.location.pathname = "/public/work.html";
+            window.location.pathname = `${path}/work.html`;
             break;
           }
           case "skills": {
-            window.location.pathname = "/public/skills.html";
+            window.location.pathname = `${path}/skills.html`;
             break;
           }
           case "contact": {
-            window.location.pathname = "/public/contact.html";
+            window.location.pathname = `${path}/contact.html`;
             break;
           }
           case "faq": {
-            window.location.pathname = "/public/faq.html";
+            window.location.pathname = `${path}/faq.html`;
             break;
           }
           default: {
@@ -78,7 +75,7 @@ $(document).ready(() => {
     },
     {
       greetings: "",
-      prompt: "root@coffeemachine~/Work" + path + "$ > ",
+      prompt: "[root@coffeemachine ~/Work]$ > ",
     }
   );
 });
