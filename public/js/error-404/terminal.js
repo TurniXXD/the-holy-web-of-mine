@@ -17,7 +17,7 @@ $(document).ready(() => {
             break;
           }
           case "contact.txt": {
-            this.echo("\nMail: contact@jakubvantuch.eu\n");
+            this.echo("\nMail: contact@vantuch.dev\n");
             break;
           }
           default: {
@@ -38,7 +38,7 @@ $(document).ready(() => {
       cd: function (value) {
         switch (value) {
           case "about": {
-            window.location.href = "http://127.0.0.1:5501/public/about.html";
+            window.location.pathname = "/public/about.html";
             break;
           }
           case "about.txt": {
@@ -54,19 +54,19 @@ $(document).ready(() => {
             break;
           }
           case "work": {
-            window.location.href = "http://127.0.0.1:5501/public/work.html";
+            window.location.pathname = "/public/work.html";
             break;
           }
           case "skills": {
-            window.location.href = "http://127.0.0.1:5501/public/skills.html";
+            window.location.pathname = "/public/skills.html";
             break;
           }
           case "contact": {
-            window.location.href = "http://127.0.0.1:5501/public/contact.html";
+            window.location.pathname = "/public/contact.html";
             break;
           }
           case "faq": {
-            window.location.href = "http://127.0.0.1:5501/public/faq.html";
+            window.location.pathname = "/public/faq.html";
             break;
           }
           default: {
