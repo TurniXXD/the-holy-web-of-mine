@@ -3,22 +3,17 @@ $(document).ready(() => {
   var input = "hello world";
   $("#about-text").terminal(
     {
-      h: function () {
+      help: function () {
         this.echo(
-          "\ncat  -  print files\nls  -  list files and directories\ncd  -  change path to directory\n"
+          "\ncat [FILENAME] -  print files\nls  -  list files and directories\ncd [DIRECTORY] -  change path to directory\n"
         );
       },
       cat: function (value) {
         switch (value) {
           case "about.txt": {
             this.echo(
-              "\nHi, I am happy that you discovered my file.\n\nMy name is Jakub Vantuch, and I'm a full-stack web developer from Czech republic.\n Apart from endless hours of coding my next passion is guitar.\n I am currently employed part time at ProRocketeers as web developer.\n For any questions about cooperation don't hesitate to contact me.\n\n I use arch btw."
+              "\nHi, I am happy that you discovered my file.\n\nMy name is Jakub Vantuch, and I'm a full-stack web developer from Czech republic.\n Apart from endless hours of coding my next passion is guitar.\n I am currently employed part time at ProRocketeers and studying at POJFM.\n For any questions about cooperation don't hesitate to contact me.\n\n I use arch btw."
             );
-            break;
-          }
-          case "sources.txt": {
-            //this.echo('[[!ub;#06A0C8;none]jquery.terminal]\n[[!ub;#06A0C8;none]Bootstrap]\n[[!ub;#06A0C8;none]AOS]\n[[!ub;#06A0C8;none]Typewriter effect]');
-            this.echo("\njquery.terminal\nBootstrap\nAOS\nTypewriter effect\n");
             break;
           }
           case "contact.txt": {
@@ -86,5 +81,4 @@ $(document).ready(() => {
       prompt: "root@coffeemachine~/About" + path + "$ > ",
     }
   );
-  //$('#about-text').css("textAlign", "left");
 });

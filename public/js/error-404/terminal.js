@@ -1,7 +1,7 @@
 $(document).ready(() => {
   var path = "";
   var input = "hello world";
-  $("#faq-text").terminal(
+  $("#error-404-text").terminal(
     {
       help: function () {
         this.echo(
@@ -78,7 +78,7 @@ $(document).ready(() => {
     },
     {
       greetings: "",
-      prompt: "root@coffeemachine~/FAQ" + path + "$ > ",
+      prompt: "root@coffeemachine~/404" + path + "$ > ",
     }
   );
 });
