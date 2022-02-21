@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+* {
+	color: white;
+	font-size: 10vh;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-family: 'Goldman', cursive;
+}
+
+:root {
+	--music-color: #FFA800;
+	--music-color-dark: #FF8F0C;
+	--coding-color: #00C6CD;
+	--coding-color-dark: #06A0C8;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	background-color: #000;
+}
+
+.index-body {
+	overflow: hidden;
+}
+
+/* CONTENT-FIRST-LAYER */
+/* CODING */
+
+#coding {
+	margin: 0;
+}
+
+#coding-container {
+	display: grid;
+	height: 100%;
+}
+
+#coding-text div div {
+	color: #000;
+}
+
+#coding-img {
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
+	transition: all .3s ease-in-out;
+	transform: scale(1.225);
+	background-image: url('./img/ascii-face.png');
+	background-size: cover;
+	width: 100vh;
+	height: 200vh;
+}
+
+/* MUSIC */
+
+#music-container {
+	display: grid;
+	height: 100%;
+}
+
+#music-img {
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
+	transition: all .3s ease-in-out;
+	transform: scale(1.225);
+	background-image: url('./img/music-shadow.png');
+	background-size: cover;
+	width: 100vh;
+	height: 200vh;
+}
+
+/* CONTENT-SECOND-LAYER */
+
+.content-second-layer {
+	z-index: 1111111;
+	width: 100%;
+	position: absolute;
+	top: 0vh;
+}
+
+#breakline-container {
+	padding: 0;
+	margin: 0;
+	transition: all .3s ease-in-out;
+	height: 110vh;
+}
+
+/* CODING */
+
+#coding-breakline {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	width: 10vh;
+	height: 100vh;
+	background-color: var(--coding-color);
+	transition: all .3s ease-in-out;
+}
+
+.coding-breakline-text {
+	text-align: right;
+	transition: all .3s ease-in-out;
+	font-size: 10vh;
+}
+
+.coding-breakline-text:hover {
+	background-color: var(--coding-color-dark);
+	transition: all .3s ease-in-out;
+	cursor: pointer;
+}
+
+#coding-text {
+	transition: all .5s ease-in-out;
+	opacity: 0;
+}
+
+#coding-text-title {
+	display: block;
+	margin-top: 11.5vh;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#coding-text-title span {
+	font-size: 16vh;
+}
+
+#coding-title-container {
+	width: 100%;
+	transform: skew(-10deg);
+}
+
+
+#coding-title {
+	position: absolute;
+	left: 20vh;
+	top: -100vh;
+	writing-mode: vertical-rl;
+	transform: rotateZ(180deg);
+	transition: all .5s ease-in-out;
+}
+
+#coding-title div {
+	font-size: 27vh;
+}
+
+/* MUSIC */
+
+#music-breakline {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	width: 10vh;
+	height: 100vh;
+	background-color: var(--music-color);
+	transition: all .3s ease-in-out;
+}
+
+.music-breakline-text {
+	transition: all .3s ease-in-out;
+	text-align: left;
+	font-size: 10vh;
+}
+
+.music-breakline-text:hover {
+	background-color: var(--music-color-dark);
+	transition: all .3s ease-in-out;
+	cursor: pointer;
+}
+
+#music-breakline-video {
+	
+}
+
+#music-text {
+	transition: all 0.6s ease-in-out;
+	right: 10vh;
+	opacity: 0;
+	text-align: left;
+}
+
+#music-text-title {
+	display: block;
+	margin-top: 2.5vh;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#music-text-title span {
+	top: 10vh;
+	font-size: 16vh;
+}
+
+#music-title-container {
+	width: 100%;
+	transform: skew(10deg);
+
+}
+
+#music-title {
+	position: absolute;
+	top: -100vh;
+	right: 20vh;
+	writing-mode: vertical-rl;
+	transform: rotateZ(360deg);
+	transition: all .3s ease-in-out;
+}
+
+#music-title div {
+	font-size: 27vh;
+}
+
+@keyframes musicTextTitle {
+	from {
+		margin-top: -100vh;
+	}
+
+	to {
+		margin-top: 100vh;
+	}
+}

@@ -1,7 +1,0 @@
-.work-content-container a img{
-	transition: all 0.3s ease-in-out;
-}
-
-.work-content-container a img:hover{
-	transform: scale(1.025) !important;
-}
