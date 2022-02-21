@@ -45,7 +45,7 @@ body {
 }
 
 .bg-img-wrapper {
-	background-image: url(../public/img/ascii-face.png);
+	background-image: url(./img/ascii-face.png);
 	background-repeat: no-repeat;
 	background-size: 75% 100%;
 	background-position: center;

@@ -54,7 +54,7 @@ body {
 	margin: auto;
 	transition: all .3s ease-in-out;
 	transform: scale(1.225);
-	background-image: url('../public/img/ascii-face.png');
+	background-image: url('./img/ascii-face.png');
 	background-size: cover;
 	width: 100vh;
 	height: 200vh;
@@ -73,7 +73,7 @@ body {
 	margin: auto;
 	transition: all .3s ease-in-out;
 	transform: scale(1.225);
-	background-image: url('../public/img/music-shadow.png');
+	background-image: url('./img/music-shadow.png');
 	background-size: cover;
 	width: 100vh;
 	height: 200vh;
