@@ -33,7 +33,7 @@ $(document).ready(() => {
       },
       ls: function () {
         this.echo(
-          "\n[[b;blue;none]about]\nabout.txt\n[[b;blue;none]contact]\ncontact.txt\n[[b;blue;none]music]\n[[b;blue;none]skills]\n[[b;blue;none]work]\n"
+          "\n[[b;blue;none]about]\tabout.txt\t[[b;blue;none]contact]   contact.txt\t[[b;blue;none]music]\t[[b;blue;none]skills]\t[[b;blue;none]work]\n"
         );
       },
       cd: function (value) {

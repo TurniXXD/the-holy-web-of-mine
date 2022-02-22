@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
 * {
-	color: var(--coding-color-dark);
+	color: var(--coding-color);
 	font-size: 10vh;
 	text-align: center;
 	margin: 0;
@@ -12,7 +12,7 @@
 :root {
 	--music-color: #FFA800;
 	--music-color-dark: #FF8F0C;
-	--coding-color: #00C6CD;
+	--coding-color: #69F3F8;
 	--coding-color-dark: #06A0C8;
 	--coding-color-darker: #067996;
 	--music-text-shadow: 1px 1px 1px #FFA800,
@@ -243,12 +243,12 @@ body {
 }
 
 .toggle-text-container div div label:before {
-	background: var(--coding-color-dark);
+	background: var(--coding-color);
 	display: block;
 	transition: all 0.2s ease;
 	border-radius: 2em;
 	transition: 0.3s ease;
-	border: 3px solid var(--coding-color-dark);
+	border: 3px solid var(--coding-color);
 	width: 0.3em;
 	height: 0.3em;
 	top: 0.05em;
@@ -378,7 +378,7 @@ body {
 }
 
 .terminal, .terminal-output {
-	--color: var(--coding-color-dark);
+	--color: var(--coding-color);
 	--background: none;
 	--size: 2;
 }
@@ -459,13 +459,13 @@ form div div div input:focus, #frmMessageA:focus {
 #frmPhoneNumA:-webkit-autofill:hover,
 #frmPhoneNumA:-webkit-autofill:focus,
 #frmPhoneNumA:-webkit-autofill:active {
-	-webkit-text-fill-color: var(--coding-color-dark) !important;
+	-webkit-text-fill-color: var(--coding-color) !important;
 	transition: background-color 5000s;
 }
 
 #frmMessageA {
 	font-size: 3vh;
-	width: 87.65vh;
+	width: 87.4vh;
 	height: 20vh;
 	text-align: left;
 	resize: none;
@@ -484,19 +484,12 @@ input[type=submit] {
 	transition: all .3s ease-in-out;
 	padding-top: 0.5vh;
 	padding-bottom: 0.5vh;
-	color: var(--coding-color-dark);
-}
-
-input[type=submit]:hover {
-/* 	text-shadow: var(--coding-text-shadow);
- */	padding-top: 0vh;
-	padding-bottom: 1vh;
+	color: var(--coding-color);
 }
 
 ::placeholder {
 	/* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: var(--coding-color-dark);
-	opacity: 1;
+	color: var(--coding-color);
 	/* Firefox */
 }
 
@@ -998,7 +991,7 @@ textarea::-webkit-scrollbar-thumb {
 
 	.toggle-text-container div div label:before {
 		border-radius: 2em;
-		border: 3px solid var(--coding-color-dark);
+		border: 3px solid var(--coding-color);
 		width: 0.3em;
 		height: 0.3em;
 		top: 0.05em;
