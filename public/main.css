@@ -102,15 +102,19 @@ body {
 	border-bottom: 0;
 }
 
+.nav .nav-without-border {
+	border-top: none;
+}
+
 .nav div div a {
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
-	padding-top: 10vh;
+	padding-top: 5vh;
 	margin-bottom: 1vh;
-	font-size: 10vh;
+	font-size: 0.8rem;
 	padding-left: 0.5vh;
 	padding-right: 0.5vh;
 	border: 0;
@@ -388,7 +392,7 @@ body {
 	font-family: 'Goldman', cursive !important;
 }
 
-.cmd-prompt > span > span {
+.cmd-prompt>span>span {
 	width: 23.5vw !important;
 }
 
@@ -408,6 +412,14 @@ body {
 
 .work-content-container a img:hover {
 	transform: scale(1.025) !important;
+}
+
+.work-content-container {
+	display: flex;
+}
+
+.mobile-work-content-container-wrapper {
+	display: none;
 }
 
 /* SKILLS */
@@ -881,7 +893,10 @@ textarea::-webkit-scrollbar-thumb {
 	.nav div div a {
 		font-size: 8vh;
 	}
-
+	.work-content-container a img {
+		max-height: 100%;
+		width: 20px;
+	}
 }
 
 @media only screen and (max-width: 1050px) {
@@ -1762,6 +1777,19 @@ textarea::-webkit-scrollbar-thumb {
 	.terminal, .terminal-output {
 		--size: 1;
 	}
+
+	.work-content-container a img {
+		max-height: 100%;
+		width: 300px;
+	}
+
+	.work-content-container {
+		display: none;
+	}
+	
+	.mobile-work-content-container-wrapper {
+		display: flex;
+	}
 }
 
 
@@ -1779,3 +1807,10 @@ textarea::-webkit-scrollbar-thumb {
 
 /* 9.5 EL (>=1200px) */
 @media only screen and (min-width: 1140px) {}
+
+@media only screen and (max-width: 1500px) {
+	.work-content-container a img {
+		max-height: 100%;
+		width: 400px;
+	}
+}
